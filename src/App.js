@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import List from "./pages/List";
 import ListDetail from './pages/ListDetail';
@@ -12,6 +12,7 @@ import Write from "./pages/Write";
 
 function App() {
   return (
+
     <BrowserRouter>
       <NavBar/>
         <Routes>
@@ -23,6 +24,8 @@ function App() {
           <Route path = "/list/:id/others" element = {<ListOthers/>}/>
         </Routes>
     </BrowserRouter>
+
+
   );
 }
 

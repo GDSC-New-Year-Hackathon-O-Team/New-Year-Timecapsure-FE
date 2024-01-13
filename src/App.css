@@ -9,39 +9,103 @@ body {
   text-align: center;
   font-family: 'Gowun Dodum', 'Nanum Pen Script', sans-serif;
 
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 50%;
+  height: auto; /* 이 옵션을 사용하면 가로 비율을 유지한 채로 세로 크기를 자동 조절합니다. */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* 모바일 화면 스타일 */
+@media (max-width: 600px) {
+  .logo {
+    width: 100%;
+    height: 680px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px; /* 선택적으로 최대 너비를 지정할 수 있습니다. */
+}
+
+
+.page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh; /* 화면 세로 높이를 기준으로 가운데 정렬 */
 }
 
-.App-link {
-  color: #61dafb;
+.log {
+  width: 100%; /* 이미지를 부모 요소에 꽉 차게 표시 */
+  max-width: 400px; /* 이미지의 최대 너비를 설정 (원하는 크기로 조정) */
+  height: auto; /* 가로 비율에 맞게 높이를 자동 조정 */
 }
 
-@keyframes App-logo-spin {
+/* 모바일 화면에 대한 스타일 */
+@media screen and (max-width: 767px) {
+  .log {
+    max-width: 100%; /* 모바일 화면에서 이미지가 100%로 꽉 차게 표시됨 */
+  }
+}
+
+/* index.css (또는 해당 스타일 파일) */
+
+.home-icon {
+  position: fixed;
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+/* 미디어 쿼리 추가 */
+@media (max-width: 768px) {
+  /* 화면 너비가 768px 이하일 때 적용되는 스타일 */
+  .home-icon {
+    bottom: 0; /* 화면 아래쪽에 고정 */
+    left: 0;
+    top: auto; /* top 속성 초기화 */
+  }
+}
+
+.box {
+  border: 2px solid #000;
+  padding: 10px;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+
+@media screen and (max-width: 767px) {
+  .image-box4 {
+    margin-left: 5px;
+  }
+}
+
+/* Write.css */
+
+@keyframes slideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.label-slide-in {
+  animation: slideIn 1s ease-in-out;
+  margin-bottom: 0; 
+}
+
+
+
