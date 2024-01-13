@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap');
+
+body {
+  font-family: 'Gowun Dodum', 'Nanum Pen Script', sans-serif;
+  background-color: rgb(213, 243, 255);
+}
+
 .App {
   text-align: center;
+  font-family: 'Gowun Dodum', 'Nanum Pen Script', sans-serif;
+
 }
 
 .App-logo {
